@@ -1,42 +1,38 @@
 ﻿@{
     ViewData["Title"] = "Про сайт";
 }
+<div class="container">
+    <h1 style="text-align:center">О нас</h1>
 
-<h1 style="text-align:center; color: #444444;
-text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;" class="fw-bolder">Наша команда</h1>
+    <h2 style="text-align:left">Привет !</h2>
 
-<div class="row" style="margin-top:50px;">
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img src="~/employees/employee1.jpg" class="card-img-top" alt="Фотография работника не найдена">
-            <div class="card-body">
-                <h5 class="card-title">Анжелика</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+    <h3>
+        Мы – команда Movie Review, фильмового портала для русскоязычной аудитории.
+        Мы работаем для вас уже несколько лет и каждый день стараемся сделать еще один небольшой полезный вклад в вашу жизнь.
+        У нас вы можете подобрать себе фильм по вкусу и на любую тематику !
+    </h3>
+
+    <hr />
+
+    <div>
+        <h2>Сдеcь вы можете отправить нам свои пожелания</h2>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label fw-bold">Електронная почта</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
-    </div>
 
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img src="~/employees/employee2.jpg" class="card-img-top" alt="Фотография работника не найдена">
-            <div class="card-body">
-                <h5 class="card-title">Вероника</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label fw-bold">Ваше пожелание</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-    </div>
 
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img src="~/employees/employee3.jpg" class="card-img-top" alt="Фотография работника не найдена">
-            <div class="card-body">
-                <h5 class="card-title">Елизавета</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+        <button type="button" class="btn btn-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16" style="margin-right:2px; margin-bottom:2px;">
+                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+            </svg>
+            Отправить
+        </button>
     </div>
 </div>
 

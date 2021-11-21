@@ -157,3 +157,8 @@ C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\zh-Hant\Microsoft.CodeA
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Home\Contacts.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Create.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Delete.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Details.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Edit.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Index.cshtml.g.cs

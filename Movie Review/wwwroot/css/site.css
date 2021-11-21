@@ -8,6 +8,7 @@ a {
     color: #0366d6;
 }
 
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
@@ -68,3 +69,31 @@ body {
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
 }
+
+/* My code */
+.underscores {
+    margin-top: 5px;
+    position: relative;
+    color: #00a650; /*задаём цвет ссылки*/
+    cursor: pointer;
+    line-height: 2; /*задаём высоту строки*/
+    text-decoration: none; /*убираем подчёркивание*/
+}
+
+.underscores:after {
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0; /*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: tomato; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.5s ease-out; /*задаём время анимации*/
+}
+
+.underscores:hover:after,
+.underscores:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+
