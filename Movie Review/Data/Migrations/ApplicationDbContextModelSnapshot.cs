@@ -254,7 +254,8 @@ namespace Movie_Review.Data.Migrations
 
                     b.Property<string>("MovieDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(240)
+                        .HasColumnType("nvarchar(240)");
 
                     b.Property<string>("PathToPhoto")
                         .IsRequired()

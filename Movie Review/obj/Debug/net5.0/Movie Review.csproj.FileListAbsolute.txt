@@ -162,3 +162,19 @@ C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Delet
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Details.cshtml.g.cs
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Edit.cshtml.g.cs
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Index.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Janres\Create.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Janres\Delete.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Janres\Details.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Janres\Edit.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Janres\Index.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Countries\Create.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Countries\Delete.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Countries\Details.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Countries\Edit.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Countries\Index.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\Create.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\Delete.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\Details.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\Edit.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\Index.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Movie Review.csproj.AssemblyReference.cache

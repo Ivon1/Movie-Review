@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Movie_Review.Models.Janre>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-top:20px">Список жанров</h1>
+
+<p>
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Create">Создать новый</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Имя жанра 
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JanreName)
+            </td>
+            <td>
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Edit" asp-route-id="@item.Id">Редактировать</a> |
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Details" asp-route-id="@item.Id">Детали</a> |
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Delete" asp-route-id="@item.Id">Удаление</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

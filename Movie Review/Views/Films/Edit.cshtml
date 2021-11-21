@@ -5,9 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<h1 style="margin-top:20px">Редактирование</h1>
 
-<h4>Film</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -21,12 +20,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="MovieDescription" class="control-label"></label>
-                <input asp-for="MovieDescription" class="form-control" />
+                <input asp-for="MovieDescription" class="form-control" maxlength="240"/>
                 <span asp-validation-for="MovieDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PathToPhoto" class="control-label"></label>
-                <input asp-for="PathToPhoto" class="form-control" />
+                <input asp-for="PathToPhoto" type="file" style="padding:5px" class="input-group-text" for="inputGroupFile01"/>
                 <span asp-validation-for="PathToPhoto" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -50,13 +49,13 @@
                 <span asp-validation-for="JanreId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Вернутся к списку</a>
 </div>
 

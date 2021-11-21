@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Movie_Review.Models.Producer>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-top:20px">Список режисеров</h1>
+
+<p>
+    <a asp-action="Create">Добавить нового</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Режисер
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProducerName)
+            </td>
+            <td>
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

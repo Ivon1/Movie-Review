@@ -1,0 +1,24 @@
+﻿@model Movie_Review.Models.Producer
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-top:20px">Детали</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Режисер
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProducerName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Back to List</a>
+</div>

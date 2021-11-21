@@ -12,7 +12,7 @@ namespace Movie_Review.Models
         public string FimlTitle { get; set; }
 
 
-        [Required, Display(Name = "MovieDescription")]
+        [Required, Display(Name = "MovieDescription"), MaxLength(240)]
         public string MovieDescription { get; set; }
 
 

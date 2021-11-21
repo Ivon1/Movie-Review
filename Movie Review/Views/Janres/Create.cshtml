@@ -1,0 +1,30 @@
+﻿@model Movie_Review.Models.Janre
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-top:20px">Добавление жанра</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JanreName" class="control-label">Имя жанра</label>
+                <input asp-for="JanreName" class="form-control" />
+                <span asp-validation-for="JanreName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Добавить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Вернутся к списку</a>
+</div>
+

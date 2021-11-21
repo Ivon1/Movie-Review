@@ -1,0 +1,27 @@
+﻿@model Movie_Review.Models.Producer
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="margin-top:20px">Delete</h1>
+
+<h3>Вы уверены что хотите удалить режисера?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Режисер
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProducerName)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Back to List</a>
+    </form>
+</div>

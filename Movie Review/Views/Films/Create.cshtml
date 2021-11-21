@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1 style="margin-top:20px">Добавление фильма</h1>
 
 <h4>Film</h4>
 <hr />
@@ -14,35 +14,35 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FimlTitle" class="control-label"></label>
+                <label asp-for="FimlTitle" class="control-label">Название</label>
                 <input asp-for="FimlTitle" class="form-control" />
                 <span asp-validation-for="FimlTitle" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MovieDescription" class="control-label"></label>
-                <input asp-for="MovieDescription" class="form-control" />
+                <label asp-for="MovieDescription" class="control-label">Описание</label>
+                <input asp-for="MovieDescription" class="form-control" maxlength="240"/>
                 <span asp-validation-for="MovieDescription" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PathToPhoto" class="control-label"></label>
-                <input asp-for="PathToPhoto" class="form-control" />
+                <label asp-for="PathToPhoto" class="control-label">Путь к фото</label>
+                <input asp-for="PathToPhoto" type="file" style="padding:5px" class="input-group-text" for="inputGroupFile01"/>
                 <span asp-validation-for="PathToPhoto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Rate" class="control-label"></label>
+                <label asp-for="Rate" class="control-label">Рейтинг</label>
                 <input asp-for="Rate" class="form-control" />
                 <span asp-validation-for="Rate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProducerId" class="control-label"></label>
+                <label asp-for="ProducerId" class="control-label">Режисер</label>
                 <select asp-for="ProducerId" class ="form-control" asp-items="ViewBag.ProducerId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="CountryId" class="control-label"></label>
+                <label asp-for="CountryId" class="control-label">Страна</label>
                 <select asp-for="CountryId" class ="form-control" asp-items="ViewBag.CountryId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="JanreId" class="control-label"></label>
+                <label asp-for="JanreId" class="control-label">Жанр</label>
                 <select asp-for="JanreId" class ="form-control" asp-items="ViewBag.JanreId"></select>
             </div>
             <div class="form-group">

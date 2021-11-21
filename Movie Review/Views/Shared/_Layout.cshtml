@@ -43,30 +43,23 @@
 
                                 <ul class="dropdown-menu bg-dark" area-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item text-light bg-dark" asp-controller="Films" asp-action="Index">Фильмы</a></li>
-                                    <li><a class="dropdown-item text-light bg-dark" asp-controller="" asp-action="Index">Жанры</a></li>
-                                    <li><a class="dropdown-item text-light bg-dark" asp-controller="" asp-action="Index">Страны</a></li>
-                                    <li><a class="dropdown-item text-light bg-dark" asp-controller="" asp-action="Index">Продюсеры</a></li>
+                                    <li><a class="dropdown-item text-light bg-dark" asp-controller="Janres" asp-action="Index">Жанры</a></li>
+                                    <li><a class="dropdown-item text-light bg-dark" asp-controller="Countries" asp-action="Index">Страны</a></li>
+                                    <li><a class="dropdown-item text-light bg-dark" asp-controller="Producers" asp-action="Index">Продюсеры</a></li>
                                 </ul>
                             </li>
                         }
 
                     </ul>
+
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
 
-    @if(@ViewData["Title"].ToString() == "Log in" 
-    ||  @ViewData["Title"].ToString() == "Register"
-    ||  @ViewData["Title"].ToString() == "Profile"
-    ||  @ViewData["Title"].ToString() == "Create"
-    ||  @ViewData["Title"].ToString() == "Details"
-    ||  @ViewData["Title"].ToString() == "Edit"
-    ||  @ViewData["Title"].ToString() == "Manage Email"
-    ||  @ViewData["Title"].ToString() == "Change password"
-    ||  @ViewData["Title"].ToString() == "TwoFactorAuthentication"
-    ||  @ViewData["Title"].ToString() == "Personal Data")
+    @if(@ViewData["Title"].ToString() != "Каталог фильмов" 
+    && @ViewData["Title"].ToString() != "Главная страница")
     {
         <div style="margin:auto;" class="container">
             <main role="main" class="pb-3">
@@ -79,7 +72,6 @@
               @RenderBody()
             </main>
         </div>
-
     }
 
     <footer class="border-top footer text-muted">

@@ -22,8 +22,4 @@
     <None Include="wwwroot\img\about_bg1.jpg" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\img\Films\" />
-  </ItemGroup>
-
 </Project>
