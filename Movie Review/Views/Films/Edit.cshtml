@@ -4,8 +4,10 @@
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
+{
 
-<h1 style="margin-top:20px">Редактирование</h1>
+<h1 style="margin-top:20px">Editing</h1>
 
 <hr />
 <div class="row">
@@ -56,6 +58,6 @@
 </div>
 
 <div>
-    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Вернутся к списку</a>
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Back to list</a>
 </div>
-
+}

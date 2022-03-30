@@ -6,7 +6,6 @@ C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\Movie Review.deps.json
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\Movie Review.runtimeconfig.json
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\Movie Review.runtimeconfig.dev.json
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\Movie Review.dll
-C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\ref\Movie Review.dll
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\Movie Review.pdb
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\Movie Review.Views.dll
 C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\Movie Review.Views.pdb
@@ -178,3 +177,4 @@ C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\D
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\Edit.cshtml.g.cs
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\Index.cshtml.g.cs
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Movie Review.csproj.AssemblyReference.cache
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\refint\Movie Review.dll

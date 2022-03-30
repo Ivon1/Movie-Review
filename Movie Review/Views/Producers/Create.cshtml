@@ -5,7 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="margin-top:20px">Добавить режисера</h1>
+@if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
+{
+
+<h1 style="margin-top:20px">Add director</h1>
 
 <hr />
 <div class="row">
@@ -13,18 +16,18 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ProducerName" class="control-label">Режисер</label>
+                <label asp-for="ProducerName" class="control-label">Director</label>
                 <input asp-for="ProducerName" class="form-control" />
                 <span asp-validation-for="ProducerName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Добавить" class="btn btn-primary" />
+                <input type="submit" value="Add" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Вернутся к списку</a>
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Back to list</a>
 </div>
-
+}

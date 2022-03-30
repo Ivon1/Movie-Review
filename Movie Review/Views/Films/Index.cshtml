@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Movie_Review.Models.Film>
 
 @{
-    ViewData["Title"] = "Каталог фильмов";
+    ViewData["Title"] = "Film catalog";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,34 +11,34 @@
     <div style="width:90%; margin:auto; margin-top:20px">
 
 
-        <h1>Список фильмов</h1>
+        <h1>List of films</h1>
 
         <p>
-            <a asp-action="Create">Добавить новый</a>
+            <a asp-action="Create">Add new</a>
         </p>
         <table class="table">
             <thead>
                 <tr>
                     <th>
-                        Название фильма
+                        Movie title
                     </th>
                     <th>
-                        Описание
+                        Description
                     </th>
                     <th>
-                        Фото
+                        Photo
                     </th>
                     <th>
-                        Рейтинг
+                        Rating
                     </th>
                     <th>
-                        Режисер
+                        Director
                     </th>
                     <th>
-                        Страна
+                        Country
                     </th>
                     <th>
-                        Жанр
+                        Genre
                     </th>
                     <th></th>
                 </tr>
@@ -82,28 +82,34 @@
 {
 
     <div style="width:90%; margin:auto; margin-top:20px" class="row">
-       
-        @foreach(var film in Model)
-        {
-            @**@
-            <div class="card mb-4 shadow p-3 mb-5 bg-body rounded col-md-6" style="max-width: 650px; margin:auto;">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <img style="height:max-content; width:max-content;" src="/img/Films/@film.PathToPhoto" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">@film.FimlTitle</h5>
-                            <hr />
-                            <p class="card-text">@film.MovieDescription</p>
-                            <hr />
-                            <p>Жанр: @film.Janre.JanreName</p>
-                            <hr />
-                            <p class="card-text"><small class="text-muted">Этот фильм понравился @film.Rate % пользователей</small></p>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            @{
+            }
+        </div>
+
+            @foreach (var film in Model)
+            {
+                @**@
+                <div class="card mb-4 shadow p-3 mb-5 bg-body rounded col-md-6" style="max-width: 650px; margin:auto;">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img style="height:max-content; width:max-content;" src="/img/Films/@film.PathToPhoto" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">@film.FimlTitle</h5>
+                                <hr />
+                                <p class="card-text">@film.MovieDescription</p>
+                                <hr />
+                                <p>Genre:@film.Janre.JanreName</p>
+                                <hr />
+                                <p class="card-text"><small class="text-muted">Liked this movie @film.Rate % users</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
     </div>
 }

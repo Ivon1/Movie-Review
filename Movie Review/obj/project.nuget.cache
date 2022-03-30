@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RJ/dv6O4cmbLiw0LGUtixvmZ6P7Cx5+nauF/fmVvzxQ+rIMeYJQEExK892/+iH3gpR0yXYBhph6//k96pcy15g==",
+  "dgSpecHash": "aPcivJeAHhMTvglB0xkOZr61MLNIgo6w4Y9VEAk34w7sh0pK1+IY6mD/DeUJ+WHatqggH/aCn/j82/eZYFvRAw==",
   "success": true,
   "projectFilePath": "C:\\C#\\ASP.NET\\Movie Review\\Movie Review\\Movie Review.csproj",
   "expectedPackageFiles": [
@@ -137,7 +137,7 @@
     "C:\\Users\\Lenovo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.11\\microsoft.netcore.app.host.win-x64.5.0.11.nupkg.sha512"
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
   ],
   "logs": []
 }

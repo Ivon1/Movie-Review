@@ -5,16 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 style="margin-top:20px">Список стран</h1>
+@if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
+{
+
+<h1 style="margin-top:20px">List of countries</h1>
 
 <p>
-    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Create">Создать новую</a>
+    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Create">Create a new</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Название страны
+                The name of the country
             </th>
             <th></th>
         </tr>
@@ -26,11 +29,12 @@
                 @Html.DisplayFor(modelItem => item.CountryName)
             </td>
             <td>
-                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Edit" asp-route-id="@item.Id">Редактировать</a> |
-                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Details" asp-route-id="@item.Id">Детали</a> |
-                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Delete" asp-route-id="@item.Id">Удаление</a>
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+}
