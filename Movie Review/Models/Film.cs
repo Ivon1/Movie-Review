@@ -34,6 +34,9 @@ namespace Movie_Review.Models
         [Required, Display(Name = "Janre")]
         public int JanreId { get; set; }
 
+        [Required, Display(Name = "Url")]
+        public string Url { get; set; }
+
 
         public virtual Producer Producer { get; set; }
         public virtual Country Country { get; set; }

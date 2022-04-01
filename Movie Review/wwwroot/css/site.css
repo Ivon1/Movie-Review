@@ -97,8 +97,9 @@ body {
 }
 
 .custom-font {
-    font-family: "Gabriela";
-    font-size:1.1em;
+    font-family: "Segoe UI Variable Display";
+    font-size:1.3em;
+    font-weight: bold;
 }
 
 .custom-font2 {

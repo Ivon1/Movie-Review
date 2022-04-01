@@ -14,7 +14,7 @@
         <h1>List of films</h1>
 
         <p>
-            <a asp-action="Create">Add new</a>
+            <a asp-action="Create" style="text-decoration: none; color:blue;" class="underscores">Create new</a>
         </p>
         <table class="table">
             <thead>
@@ -39,6 +39,9 @@
                     </th>
                     <th>
                         Genre
+                    </th>
+                    <th>
+                        Url
                     </th>
                     <th></th>
                 </tr>
@@ -69,6 +72,9 @@
                             @Html.DisplayFor(modelItem => item.Janre.JanreName)
                         </td>
                         <td>
+                            @Html.DisplayFor(modelItem => item.Url)
+                        </td>
+                        <td>
                             <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                             <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Details" asp-route-id="@item.Id">Details</a>
                             <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
@@ -81,7 +87,7 @@
 } else
 {
 
-    <div style="width:90%; margin:auto; margin-top:20px" class="row">
+    <div style="width:100%; margin:auto; margin-top:20px" class="row">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
@@ -92,18 +98,18 @@
             @foreach (var film in Model)
             {
                 @**@
-                <div class="card mb-4 shadow p-3 mb-5 bg-body rounded col-md-6" style="max-width: 650px; margin:auto;">
+                <div class="card mb-4 shadow p-3 mb-5 bg-body rounded col-md-5" style="margin:auto;">
                     <div class="row g-0">
                         <div class="col-md-5">
-                            <img style="height:max-content; width:max-content;" src="/img/Films/@film.PathToPhoto" class="img-fluid rounded-start" alt="...">
+                            <img style="height:400px; width:270px;" src="/img/Films/@film.PathToPhoto" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title">@film.FimlTitle</h5>
+                                <h5 class="card-title">@film.FimlTitle | <small><a style="text-decoration: none; color:blue;" class="underscores link-info" href="@film.Url" target="_blank">Link to view</a></small></h5>
                                 <hr />
                                 <p class="card-text">@film.MovieDescription</p>
                                 <hr />
-                                <p>Genre:@film.Janre.JanreName</p>
+                                <p style="font-weight:bolder;">@film.Janre.JanreName</p>
                                 <hr />
                                 <p class="card-text"><small class="text-muted">Liked this movie @film.Rate % users</small></p>
                             </div>

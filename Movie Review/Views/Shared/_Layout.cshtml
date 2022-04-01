@@ -37,7 +37,7 @@
                         @if (User.Identity.IsAuthenticated && User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
                         {
                             <li class="nav-item dropdown" style="margin-top: 10px;">
-                                <a href="#" class="nav-link dropdown-toggle" id="navbarNavDarkDropdown" data-bs-toggle="dropdown" area-expanded="false">
+                                <a href="#" class="nav-link dropdown-toggle custom-font" id="navbarNavDarkDropdown" data-bs-toggle="dropdown" area-expanded="false">
                                     Administrator
                                 </a>
 
@@ -81,7 +81,7 @@
     }
     @if (@ViewData["Title"].ToString() != "Main")
     {
-        <footer class="border-top footer text-muted bg-white">
+        <footer class="border-top footer text-muted bg-white" style="height:55px;">
             <div class="container">
                 &copy; 2021 - Movie Review - <a asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
             </div>

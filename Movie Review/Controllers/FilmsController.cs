@@ -99,7 +99,7 @@ namespace Movie_Review.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FimlTitle,MovieDescription,PathToPhoto,Rate,ProducerId,CountryId,JanreId")] Film film)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FimlTitle,MovieDescription,PathToPhoto,Rate,ProducerId,CountryId,JanreId,Url")] Film film)
         {
             if (id != film.Id)
             {
