@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="MovieDescription" class="control-label">Description</label>
-                    <input asp-for="MovieDescription" class="form-control" maxlength="230"/>
+                    <textarea style="width:500px; height:150px;" asp-for="MovieDescription" class="form-control" maxlength="400"></textarea>
                     <span asp-validation-for="MovieDescription" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -49,7 +49,8 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Url" class="control-label">Url</label>
-                    <select asp-for="Url" class ="form-control" asp-items="ViewBag.Url"></select>
+                    <input asp-for="Url" class ="form-control" asp-items="ViewBag.Url" />
+                    <span asp-validation-for="Url" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
