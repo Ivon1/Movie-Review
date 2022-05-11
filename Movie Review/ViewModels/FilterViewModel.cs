@@ -9,6 +9,6 @@ namespace Movie_Review.ViewModels
         public IEnumerable<Film> Films { get; set; }
         public SelectList Janres { get; set; }
         public SelectList Producers { get; set; }
-        public PageViewModel PageViewModel { get; set; }
+        public PageViewModel PageViewModel { get; set; }  
     }
 }

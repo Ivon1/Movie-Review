@@ -28,7 +28,7 @@ namespace Movie_Review.Controllers
         // GET: Films
         public async Task<IActionResult> Index(int? cid, int? pid, int page = 1)
         {
-            int pageSize = 4;
+            int pageSize = 2;
             IQueryable<Film> films = _context.Film.Include(f => f.Janre).Include(f => f.Producer);
 
             if (cid != null && cid != 0)
@@ -49,14 +49,12 @@ namespace Movie_Review.Controllers
             FilterViewModel viewModel = new FilterViewModel()
             {
                 Films = items,
-                Janres = new SelectList(jenres, "Id", "JenreName"),
+                Janres = new SelectList(jenres, "Id", "JanreName"),
                 Producers = new SelectList(producers, "Id", "ProducerName"),
                 PageViewModel = pageViewModel
             };
 
             return View(viewModel);
-            //var applicationDbContext = _context.Film.Include(f => f.Country).Include(f => f.Janre).Include(f => f.Producer);
-            //return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Films/Details/5
@@ -94,19 +92,21 @@ namespace Movie_Review.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FimlTitle,MovieDescription,PathToPhoto,Rate,ProducerId,CountryId,JanreId,Url")] Film film, IFormFile image)
+        public async Task<IActionResult> Create([Bind("Id,FimlTitle,MovieDescription,PathToPhoto,Rate,ProducerId,CountryId,JanreId,Url")] Film film,
+            IFormFile pathtophoto)
         {
             if (ModelState.IsValid)
             {
-                //if (image != null)
-                //{
-                //    var name = Path.Combine(_host.WebRootPath + "/img/Films/", Path.GetFileName(image.FileName));
-                //    await image.CopyToAsync(new FileStream(name, FileMode.Create));
-                //    film.PathToPhoto = image.FileName;
-                //} else
-                //{
-                //    film.PathToPhoto = "default.png";
-                //}
+                if (pathtophoto != null)
+                {
+                    var name = Path.Combine(_host.WebRootPath + "/img/Films", Path.GetFileName(pathtophoto.FileName));
+                    await pathtophoto.CopyToAsync(new FileStream(name, FileMode.Create));
+                    film.PathToPhoto = pathtophoto.FileName;
+                }
+                else
+                {
+                    film.PathToPhoto = "default.png";
+                }
 
                 _context.Add(film);
                 await _context.SaveChangesAsync();

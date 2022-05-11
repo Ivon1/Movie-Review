@@ -87,36 +87,46 @@
             </tbody>
         </table>
     </div>
+
+    <page-link page-model="Model.PageViewModel" page-action="Index" style="margin-left:4%;"></page-link>  
 } else
 {
-
     <div style="width:100%; margin:auto; margin-top:20px" class="row">
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-            @*<div class="form-group">
-                <label class="label">Jenre:</label>
-                <select name="cid" asp-items="Model.Janres" class="form-control"></select>
-            </div>
-            <div class="form-group">
-                <label class="label">Director:</label>
-                <select name="pid" asp-items="Model.Producers" class="form-control"></select>
-            </div>
-            <p style="margin-top: 30px">
-                <input type="submit" value="Filter" class="btn btn-sm btn-primary" />
-            </p>*@
+        <div class="card mb-4 shadow p-3 mb-5 bg-body rounded" style="width:200px;padding: 15px; margin:auto; margin-top: 1%;">
+            <h5 style="text-align: center">Selection filters</h5>
+            <hr />
 
-            @{
-            }
+            <form method="get" style="margin:auto;">
+                <div class="form-group">
+                    <label class="label">Ganre:</label>
+                    <select name="cid" asp-items="Model.Janres" class="form-control"></select>
+                </div>
+
+                <div class="form-group">
+                    <label class="label">Director:</label>
+                    <select name="pid" asp-items="Model.Producers" class="form-control"></select>
+                </div>
+
+                <p style="margin-top: 30px;">
+                    <button type="submit" class="btn btn-outline-dark" style="margin-left:25%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"></path>
+                        </svg>
+                        Filter
+                    </button>
+                </p>
+            </form>
         </div>
 
+
             @foreach (var film in Model.Films)
-            {
+            {               
                 @**@
-                <div class="card mb-4 shadow p-3 mb-5 bg-body rounded col-md-5" style="margin:auto; margin-top:1%">
+                <div class="card mb-4 shadow p-3 mb-5 bg-body rounded col-md-5" style="margin:auto; margin-top:1%;">
                     <div class="row g-0">
                         <div class="col-md-5">
-                            <img style="height:400px; width:270px;" src="/img/Films/@film.PathToPhoto" class="img-fluid rounded-start" alt="...">
+                            <img style="height:max-content; width:270px;" src="/img/Films/@film.PathToPhoto" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
@@ -131,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-            }           
+            }
     </div>
 
    <page-link page-model="Model.PageViewModel" page-action="Index" style="margin-left:4%;"></page-link>    

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace Movie_Review.Models
 {
@@ -16,7 +17,7 @@ namespace Movie_Review.Models
         public string MovieDescription { get; set; }
 
 
-        [Required, Display(Name = "PathToPhoto")]
+        [Display(Name = "PathToPhoto")]
         public string PathToPhoto {  get; set; }
 
         [Required, Display(Name = "Rate")]
@@ -41,5 +42,6 @@ namespace Movie_Review.Models
         public virtual Producer Producer { get; set; }
         public virtual Country Country { get; set; }
         public virtual Janre Janre { get; set; }
+
     }
 }

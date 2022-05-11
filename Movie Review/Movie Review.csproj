@@ -18,8 +18,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="wwwroot\img\about_bg1.jpg" />
-  </ItemGroup>
-
 </Project>
