@@ -7,25 +7,26 @@
 
 @if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
 {
+    <div class="obvodka m-3 p-3">
+        <h1 style="margin-top:20px">Delete</h1>
 
-<h1 style="margin-top:20px">Delete</h1>
+        <h3>Are you sure you want to remove the director?</h3>
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Director
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ProducerName)
+                </dd>
+            </dl>
 
-<h3>Are you sure you want to remove the director?</h3>
-<div>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            Director
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProducerName)
-        </dd>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Back to list</a>
-    </form>
-</div>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a style="text-decoration: none; color:#8D34FA;" class="underscores" asp-action="Index">Back to list</a>
+            </form>
+        </div>
+    </div>
 }

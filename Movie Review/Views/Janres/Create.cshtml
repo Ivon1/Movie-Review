@@ -7,27 +7,28 @@
 
 @if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
 {
+    <div style="margin:20px; padding:20px;" class="obvodka">
+        <h1 style="margin-top:20px">Adding a Genre</h1>
 
-<h1 style="margin-top:20px">Adding a Genre</h1>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="JanreName" class="control-label">Genre Name</label>
+                        <input asp-for="JanreName" class="form-control bg-dark text-light" />
+                        <span asp-validation-for="JanreName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Add" class="btn btn-primary bg-dark text-light mt-2" />
+                    </div>
+                </form>
+            </div>
+        </div>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="JanreName" class="control-label">Genre Name</label>
-                <input asp-for="JanreName" class="form-control" />
-                <span asp-validation-for="JanreName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Add" class="btn btn-primary" />
-            </div>
-        </form>
+        <div>
+            <a style="text-decoration: none; color:#8D34FA" class="underscores" asp-action="Index">Back to list</a>
+        </div>
     </div>
-</div>
-
-<div>
-    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Back to list</a>
-</div>
 }

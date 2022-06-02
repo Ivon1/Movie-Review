@@ -6,60 +6,61 @@
 }
 @if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
 {
+    <div style="margin:30px;">
+        <h1 style="margin-top:20px">Adding a movie</h1>
 
-    <h1 style="margin-top:20px">Adding a movie</h1>
-
-    <h4>Film</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create" method="post" enctype="multipart/form-data">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="FimlTitle" class="control-label">Name</label>
-                    <input asp-for="FimlTitle" class="form-control" />
-                    <span asp-validation-for="FimlTitle" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="MovieDescription" class="control-label">Description</label>
-                    <textarea style="width:500px; height:150px;" asp-for="MovieDescription" class="form-control" maxlength="400"></textarea>
-                    <span asp-validation-for="MovieDescription" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="PathToPhoto" class="control-label">Path to photo</label>
-                    <input asp-for="PathToPhoto" type="file" class="form-control" style="padding:3px" />
-                    <span asp-validation-for="PathToPhoto" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Rate" class="control-label">Rating</label>
-                    <input asp-for="Rate" class="form-control" />
-                    <span asp-validation-for="Rate" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ProducerId" class="control-label">Director</label>
-                    <select asp-for="ProducerId" class ="form-control" asp-items="ViewBag.ProducerId"></select>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CountryId" class="control-label">Country</label>
-                    <select asp-for="CountryId" class ="form-control" asp-items="ViewBag.CountryId"></select>
-                </div>
-                <div class="form-group">
-                    <label asp-for="JanreId" class="control-label">Genre</label>
-                    <select asp-for="JanreId" class ="form-control" asp-items="ViewBag.JanreId"></select>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Url" class="control-label">Url</label>
-                    <input asp-for="Url" class ="form-control" asp-items="ViewBag.Url" />
-                    <span asp-validation-for="Url" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
-            </form>
+        <h4>Film</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group" style="margin:5px;">
+                        <label asp-for="FimlTitle" class="control-label">Name</label>
+                        <input asp-for="FimlTitle" class="form-control bg-dark text-light" />
+                        <span asp-validation-for="FimlTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="margin:5px;">
+                        <label asp-for="MovieDescription" class="control-label">Description</label>
+                        <textarea style="width:500px; height:150px;" asp-for="MovieDescription" class="form-control bg-dark text-light" maxlength="400"></textarea>
+                        <span asp-validation-for="MovieDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="margin:5px;">
+                        <label asp-for="PathToPhoto" class="control-label">Path to photo</label>
+                        <input asp-for="PathToPhoto" type="file" class="form-control bg-dark text-light" style="padding:3px" />
+                        <span asp-validation-for="PathToPhoto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="margin-top:5px;">
+                        <label asp-for="Rate" class="control-label">Rating</label>
+                        <input asp-for="Rate" class="form-control bg-dark text-light" />
+                        <span asp-validation-for="Rate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="margin:5px;">
+                        <label asp-for="ProducerId" class="control-label">Director</label>
+                        <select asp-for="ProducerId" class="form-control bg-dark text-light" asp-items="ViewBag.ProducerId"></select>
+                    </div>
+                    <div class="form-group" style="margin:5px;">
+                        <label asp-for="CountryId" class="control-label">Country</label>
+                        <select asp-for="CountryId" class="form-control bg-dark text-light" asp-items="ViewBag.CountryId"></select>
+                    </div>
+                    <div class="form-group" style="margin:5px;">
+                        <label asp-for="JanreId" class="control-label">Genre</label>
+                        <select asp-for="JanreId" class="form-control bg-dark text-light" asp-items="ViewBag.JanreId"></select>
+                    </div>
+                    <div class="form-group" style="margin:5px;">
+                        <label asp-for="Url" class="control-label">Url</label>
+                        <input asp-for="Url" class="form-control bg-dark text-light" asp-items="ViewBag.Url" />
+                        <span asp-validation-for="Url" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="margin:5px;">
+                        <input type="submit" value="Create" class="btn btn-primary bg-dark text-light" style="margin-top:20px;"/>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div>
-        <a asp-action="Index">Back to List</a>
+        <div>
+            <a asp-action="Index" style="margin-top:20px;">Back to List</a>
+        </div>
     </div>
 }

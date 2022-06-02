@@ -178,3 +178,11 @@ C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Producers\I
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Movie Review.csproj.AssemblyReference.cache
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\refint\Movie Review.dll
 C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Views\Films\Details.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Movie_Review.Properties.Resources.resources
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Movie Review.csproj.GenerateResource.cache
+C:\C#\ASP.NET\Movie Review\Movie Review\bin\Debug\net5.0\libman.json
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\C#\ASP.NET\Movie Review\Movie Review\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs

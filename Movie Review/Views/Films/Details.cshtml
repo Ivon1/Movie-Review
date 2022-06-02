@@ -7,65 +7,66 @@
 
 @if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
 {
+    <div style="margin:20px; padding:20px;" class="obvodka">
+        <h1>Details</h1>
 
-<h1>Details</h1>
-
-<div>
-    <h4>Film</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FimlTitle)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FimlTitle)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MovieDescription)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MovieDescription)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PathToPhoto)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PathToPhoto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Rate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Rate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Producer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Producer.ProducerName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Country)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Country.CountryName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Janre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Janre.JanreName)
-        </dd>
-         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Url)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Url)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+        <div>
+            <h4>Film</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FimlTitle)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FimlTitle)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MovieDescription)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MovieDescription)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PathToPhoto)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PathToPhoto)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Rate)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Rate)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Producer)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Producer.ProducerName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Country)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Country.CountryName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Janre)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Janre.JanreName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Url)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Url)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a class="underscores" style="color:#8D34FA" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+            <a class="underscores" style="color:#8D34FA" asp-action="Index">Back to List</a>
+        </div>
+    </div>
 }

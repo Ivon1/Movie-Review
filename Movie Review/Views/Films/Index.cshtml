@@ -11,105 +11,106 @@
 
 @if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
 {
-    <div style="width:90%; margin:auto; margin-top:20px">
+    <div style="margin:20px;" class="obvodka">
+        <div style="width:90%; margin:auto; margin-top:20px">
 
 
-        <h1>List of films</h1>
+            <h1>List of films</h1>
 
-        <p>
-            <a asp-action="Create" style="text-decoration: none; color:blue;" class="underscores">Create new</a>
-        </p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        Movie title
-                    </th>
-                    <th>
-                        Description
-                    </th>
-                    <th>
-                        Photo
-                    </th>
-                    <th>
-                        Rating
-                    </th>
-                    <th>
-                        Director
-                    </th>
-                    <th>
-                        Country
-                    </th>
-                    <th>
-                        Genre
-                    </th>
-                    <th>
-                        Url
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.Films)
-                {
+            <p>
+                <a asp-action="Create" style="text-decoration: none; color:#8D34FA;" class="underscores">Create new</a>
+            </p>
+            <table class="table">
+                <thead>
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.FimlTitle)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.MovieDescription)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PathToPhoto)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Rate)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Producer.ProducerName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Country.CountryName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Janre.JanreName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Url)
-                        </td>
-                        <td>
-                            <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                            <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Details" asp-route-id="@item.Id">Details</a>
-                            <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                        </td>
+                        <th>
+                            Movie title
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Photo
+                        </th>
+                        <th>
+                            Rating
+                        </th>
+                        <th>
+                            Director
+                        </th>
+                        <th>
+                            Country
+                        </th>
+                        <th>
+                            Genre
+                        </th>
+                        <th>
+                            Url
+                        </th>
+                        <th></th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Films)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FimlTitle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MovieDescription)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PathToPhoto)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Rate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Producer.ProducerName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Country.CountryName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Janre.JanreName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Url)
+                            </td>
+                            <td>
+                                <a style="text-decoration: none; color:#8D34FA;" class="underscores" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a style="text-decoration: none; color:#8D34FA;" class="underscores" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a style="text-decoration: none; color:#8D34FA;" class="underscores" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-
     <page-link page-model="Model.PageViewModel" page-action="Index" style="margin-left:4%;"></page-link>  
 } else
 {
-    <div style="width:100%; margin:auto; margin-top:20px" class="row">
+    <div style="width:100%; margin:auto; margin-top:3%;" class="row">
 
-        <div class="card mb-4 shadow p-3 mb-5 bg-body rounded" style="width:200px;padding: 15px; margin:auto; margin-top: 1%;">
+        <div class="card mb-4 shadow p-3 mb-5 rounded bg-dark obvodka" style="width:200px;padding: 15px; margin:auto; margin-top: 1%; color:white;">
             <h5 style="text-align: center">Selection filters</h5>
             <hr />
 
             <form method="get" style="margin:auto;">
                 <div class="form-group">
                     <label class="label">Ganre:</label>
-                    <select name="cid" asp-items="Model.Janres" class="form-control"></select>
+                    <select name="cid" asp-items="Model.Janres" class="form-control bg-dark selectMy" style="color:white"></select>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" style="margin-top:30%;">
                     <label class="label">Director:</label>
-                    <select name="pid" asp-items="Model.Producers" class="form-control"></select>
+                    <select name="pid" asp-items="Model.Producers" class="form-control bg-dark selectMy" style="color:white"></select>
                 </div>
 
-                <p style="margin-top: 30px;">
-                    <button type="submit" class="btn btn-outline-dark" style="margin-left:25%;">
+                <p style="margin-top:30%;">
+                    <button type="submit" class="btn btn-outline-light" style="margin-left:25%;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
                             <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"></path>
                         </svg>
@@ -123,7 +124,8 @@
             @foreach (var film in Model.Films)
             {               
                 @**@
-                <div class="card mb-4 shadow p-3 mb-5 bg-body rounded col-md-5" style="margin:auto; margin-top:1%;">
+                <div class="bg-dark card mb-4 shadow p-3 mb-5 rounded col-md-5 bg-dark obvodka" 
+                    style="margin:auto; margin-top:1%; color:white">
                     <div class="row g-0">
                         <div class="col-md-5">
                             <img style="height:max-content; width:270px;" src="/img/Films/@film.PathToPhoto" class="img-fluid rounded-start" alt="...">
@@ -136,7 +138,7 @@
                                 <hr />
                                 <p style="font-weight:bolder;">@film.Janre.JanreName</p>
                                 <hr />
-                                <p class="card-text"><small class="text-muted">Liked this movie @film.Rate % users</small></p>
+                                <p class="card-text"><small style="color:white">Liked this movie @film.Rate % users</small></p>
                             </div>
                         </div>
                     </div>
@@ -144,5 +146,5 @@
             }
     </div>
 
-   <page-link page-model="Model.PageViewModel" page-action="Index" style="margin-left:4%;"></page-link>    
+   <page-link page-model="Model.PageViewModel" page-action="Index" class="bg-dark" style="margin-left:4%; color:white;"></page-link>    
 }

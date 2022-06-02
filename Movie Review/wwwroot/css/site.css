@@ -1,11 +1,64 @@
-﻿a.navbar-brand {
+﻿.navbar {
+    border-bottom: solid 2px #8D34FA;
+    border-radius: 10px;
+}
+
+.selectMy {
+    border: solid 3px #8D34FA;
+    border-radius: 10px;
+}
+
+.page-item.active .page-link {
+    color: #F0F6F8 !important;
+    background: #0C171B !important;
+}
+a {
+    color: #F0F6F8;
+}
+
+.pagination .page-link {
+    background: #0C171B;
+    color: white;
+}
+
+.darkbg{
+    background-color:black;
+}
+
+.obvodka {
+    border: solid 3px #33444B;
+}
+
+footer {
+    border-top: solid 2px #8D34FA;
+    border-radius: 10px;
+}
+th,td {
+    color:white;
+}
+
+label {
+    color:white;
+}
+
+h1,h2,h3,h4,h5 {
+    color: white;
+}
+
+dt, dd {
+    color: white;
+}
+
+
+a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
 }
 
 a {
-    color: #0366d6;
+    /*color: #0366d6;*/
+    color: #8D34FA;
 }
 
 .btn-primary {
@@ -160,3 +213,5 @@ body {
             font-size: 18px;
         }
 }
+
+

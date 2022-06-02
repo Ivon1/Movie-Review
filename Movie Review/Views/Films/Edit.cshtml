@@ -6,63 +6,64 @@
 }
 @if (User.Identity.Name == "Admin_IvanMarchenko@gmail.com")
 {
+    <div style="margin:20px; padding:20px;" class="obvodka">
+        <h1 style="margin-top:20px">Editing</h1>
 
-<h1 style="margin-top:20px">Editing</h1>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="FimlTitle" class="control-label"></label>
+                        <input asp-for="FimlTitle" class="form-control bg-dark text-light" />
+                        <span asp-validation-for="FimlTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MovieDescription" class="control-label"></label>
+                        <textarea style="width:500px; height:150px;" asp-for="MovieDescription" class="form-control bg-dark text-light" maxlength="230"></textarea>
+                        <span asp-validation-for="MovieDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PathToPhoto" class="control-label"></label>
+                        <input asp-for="PathToPhoto" style="padding:5px" class="form-control bg-dark text-light" />
+                        <span asp-validation-for="PathToPhoto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Rate" class="control-label"></label>
+                        <input asp-for="Rate" class="form-control bg-dark text-light" />
+                        <span asp-validation-for="Rate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ProducerId" class="control-label"></label>
+                        <select asp-for="ProducerId" class="form-control bg-dark text-light" asp-items="ViewBag.ProducerId"></select>
+                        <span asp-validation-for="ProducerId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CountryId" class="control-label"></label>
+                        <select asp-for="CountryId" class="form-control bg-dark text-light" asp-items="ViewBag.CountryId"></select>
+                        <span asp-validation-for="CountryId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="JanreId" class="control-label"></label>
+                        <select asp-for="JanreId" class="form-control bg-dark text-light" asp-items="ViewBag.JanreId"></select>
+                        <span asp-validation-for="JanreId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Url" class="control-label">Url</label>
+                        <input asp-for="Url" class="form-control bg-dark text-light" asp-items="ViewBag.Url" />
+                        <span asp-validation-for="Url" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary bg-dark text-light" style="margin-top:10px;" />
+                    </div>
+                </form>
+            </div>
+        </div>
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="FimlTitle" class="control-label"></label>
-                <input asp-for="FimlTitle" class="form-control" />
-                <span asp-validation-for="FimlTitle" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MovieDescription" class="control-label"></label>
-                <textarea style="width:500px; height:150px;" asp-for="MovieDescription" class="form-control" maxlength="230"></textarea>
-                <span asp-validation-for="MovieDescription" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PathToPhoto" class="control-label"></label>
-                <input asp-for="PathToPhoto" style="padding:5px" class="form-control"/>
-                <span asp-validation-for="PathToPhoto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rate" class="control-label"></label>
-                <input asp-for="Rate" class="form-control" />
-                <span asp-validation-for="Rate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProducerId" class="control-label"></label>
-                <select asp-for="ProducerId" class="form-control" asp-items="ViewBag.ProducerId"></select>
-                <span asp-validation-for="ProducerId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CountryId" class="control-label"></label>
-                <select asp-for="CountryId" class="form-control" asp-items="ViewBag.CountryId"></select>
-                <span asp-validation-for="CountryId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="JanreId" class="control-label"></label>
-                <select asp-for="JanreId" class="form-control" asp-items="ViewBag.JanreId"></select>
-                <span asp-validation-for="JanreId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Url" class="control-label">Url</label>
-                <input asp-for="Url" class="form-control" asp-items="ViewBag.Url"/>
-                <span asp-validation-for="Url" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        <div>
+            <a style="text-decoration: none; color:#8D34FA; margin-top:10px;" class="underscores" asp-action="Index">Back to list</a>
+        </div>
     </div>
-</div>
-
-<div>
-    <a style="text-decoration: none; color:blue;" class="underscores" asp-action="Index">Back to list</a>
-</div>
 }
